@@ -1,0 +1,87 @@
+.dashboard{
+    background-color: #DDDDFF;
+}
+// .container{
+//     width: 1200px;
+//     margin: 0 auto;
+// }
+.overallImg{
+    width: 240px;
+    height: 33px;
+}
+.mainHeading{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 166.02%;
+color: #1B1B1B;
+}
+.card{
+    padding: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: yellow;
+}
+.box{
+width: 60px;
+height: 60px;
+// padding: 35px 18px;
+border: 2px solid #000;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.iocnBox{
+    width: 8px;
+height: 8px;
+background: #5252B0;
+border-radius: 50%;
+}
+.loanCardSection{
+    background-image: url('./../../../../assets/images/loanBgImage.jpg');
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+cursor: pointer;
+}
+.mixInfo img{
+   height:240px;
+    width: 240px;
+   border-radius: 10px;
+object-fit: cover;
+}
+.mixPara{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 38px;
+/* or 208% */
+
+font-feature-settings: 'pnum' on, 'lnum' on;
+
+color: #222222;
+
+}
+.subHeading{
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 104.52%;
+/* identical to box height, or 21px */
+margin-bottom: 10px;
+align-items: center;
+color: #FFFFFF;
+padding-left: 45px;
+}
+
+
+.loadCard button{
+  display:none;
+}

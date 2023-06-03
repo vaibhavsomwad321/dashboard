@@ -1,0 +1,37 @@
+.createUser{
+    margin-left: 23px;
+}
+.container{
+   
+/* white */
+background: #FFFFFF;
+border-radius: 5px;
+}
+.heading{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 166.02%;
+/* identical to box height, or 30px */
+
+
+/* Secondary Black */
+
+color: #262626;
+}
+
+form{
+    margin: 15px 41px 30px 19px;
+}
+.form-row{
+    margin-top: 18px;
+}
+input, select , textarea{
+    &.ng-invalid.ng-touched{
+        border: 2px solid red !important;
+    }
+    &.ng-invalid.ng-dirty{
+        border: 2px solid red !important;
+    }
+}

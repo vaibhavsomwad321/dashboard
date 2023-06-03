@@ -1,0 +1,119 @@
+<h1 style="color:#1b1b1b; padding: 21px 44px 0px;">
+    Create New User
+</h1>
+<div class="createUser">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="createFrom" (ngSubmit)="onSubmit()">
+                    <div class="heading">
+                        Personal Details
+                    </div>
+                    
+                <hr>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="">First Name*</label>
+                    <input type="text" class="form-control"  formControlName="firstName">
+                    <ng-container class="alert alert-danger" *ngIf="createFrom.get('firstName')?.invalid && createFrom.get('firstName')?.touched">
+                      <span *ngIf="createFrom.get('firstName')?.errors?.['required']">first Name Is Required</span>
+                  
+                    </ng-container>
+                  </div>
+                  <div class="col">
+                    <label for="">Last Name*</label>
+                    <input type="text" class="form-control" formControlName="lastName">
+                    <ng-container class="alert alert-danger" *ngIf="createFrom.get('lastName')?.invalid && createFrom.get('lastName')?.touched">
+                      <span *ngIf="createFrom.get('lastName')?.errors?.['required']">last Name Is Required</span>
+                  
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                      <label for="">Gender*</label>
+                      <!-- <input type="text" class="form-control"  formControlName="gender" *ngFor="let genderName of gender" [value]="genderName">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('gender')?.invalid && createFrom.get('gender')?.touched">
+                        <span *ngIf="createFrom.get('gender')?.errors?.['required']">Gender  Is Required</span>
+
+                      </ng-container> -->
+                      <select class="custom-select" id="inputGroupSelect01" formControlName="gender">
+                        <option selected>Choose...</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label for="">Date of Birth*</label>
+                      <input type="date" class="form-control" formControlName="dateBirth">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('dateBirth')?.invalid && createFrom.get('dateBirth')?.touched">
+                        <span *ngIf="createFrom.get('dateBirth')?.errors?.['required']">dateBirth Is Required</span>
+
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="form-row" style="margin-bottom: 30px;">
+                    <div class="col">
+                      <label for="">Email*</label>
+                      <input type="email" class="form-control"  formControlName="email">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('email')?.invalid && createFrom.get('email')?.touched">
+                        <span *ngIf="createFrom.get('email')?.errors?.['required']">email Is Required</span>
+
+                      </ng-container>
+                    </div>
+                    <div class="col">
+                      <label for="">Phone Number*</label>
+                      <input type="number" class="form-control" formControlName="phoneNumber" maxlength="10" minlength="10">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('phoneNumber')?.invalid && createFrom.get('phoneNumber')?.touched">
+                        <span *ngIf="createFrom.get('phoneNumber')?.errors?.['required']">phoneNumber Is Required</span>
+
+                      </ng-container>
+                    </div>
+                  </div>
+                    <div class="heading">
+                        Create Password 
+                    </div>
+                <hr>
+                <div class="form-row">
+                    <div class="col">
+                      <label for="">Password*</label>
+                      <input type="password" class="form-control"  formControlName="password">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('password')?.invalid && createFrom.get('password')?.touched">
+                        <span *ngIf="createFrom.get('password')?.errors?.['required']">password Is Required</span>
+
+                      </ng-container>
+
+                      <ng-container>
+                        <span *ngIf="createFrom.get('password')?.hasError('pattern')">
+                          Password must contain at least one number, one uppercase and a
+                          lowercase letter and at least 8 characters<br />Password cannot
+                          contain whitespace!
+                        </span>
+                      </ng-container>
+                    </div>
+                    <div class="col">
+                      <label for="">Re-Enter Password*</label>
+                      <input type="password" class="form-control" formControlName="conformPassword">
+                      <ng-container class="alert alert-danger" *ngIf="createFrom.get('conformPassword')?.invalid && createFrom.get('conformPassword')?.touched">
+                        <span *ngIf="createFrom.get('conformPassword')?.errors?.['required']">conformPassword Is Required</span>
+                      </ng-container>
+                      <ng-container>
+                        <span
+                        *ngIf="createFrom.get('conformPassword')?.hasError('conformPassword')">
+                        Passwords did not match
+                    </span>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                        <button class="btn btn-primary" [disabled]="createFrom.invalid">
+                            Create
+                        </button>
+                    </div>
+                  </div>
+              </form>
+        </div>
+       
+    </div>
+</div>

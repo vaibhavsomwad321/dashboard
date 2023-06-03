@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    appToggle="show"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" routerLink="/">Dashboard </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <!-- <a class="nav-link" href="#">User</a> -->
+        <button mat-button class="nav-link" [matMenuTriggerFor]="menu">
+          User
+        </button>
+        <mat-menu #menu="matMenu" routerLinkActive="active">
+
+          <button mat-menu-item routerLink="user-table">User Table</button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item routerLink="create-user">Create User</button>
+        </mat-menu>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="chart">Chart</a>
+      </li>
+    </ul>
+  </div>
+</nav>
